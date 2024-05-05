@@ -31,6 +31,10 @@ const Home = () => {
     navigate('/despesa/' + id)
   }
 
+  const deleteDespesa = (id) => {
+    alert(id); // teste
+  }
+
   useEffect(() => {
     listarDespesas();
   }, []);
@@ -75,7 +79,10 @@ const Home = () => {
                         >
                           <img className="icon-sm" src={icons.edit} alt="" />
                         </button>
-                        <button className="btn btn-red ml-10 rounded">
+                        <button
+                          onClick={() => deleteDespesa(desp.id)}
+                          className="btn btn-red ml-10 rounded"
+                        >
                           <img className="icon-sm" src={icons.remove} alt="" />
                         </button>
                       </td>
