@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from '../../components/navbar/Navbar';
@@ -18,6 +19,8 @@ const Home = () => {
     { id: 8, icon: "https://jornadajs-devpoint.s3.amazonaws.com/icon-viagem.png", categoria: "Viagem", descricao: "Hotel", valor: 330 }
   ];
 
+  const navigate = useNavigate();
+
   const [despesas, setDespesas] = useState([]);
 
   const listarDespesas = () => {
@@ -35,7 +38,7 @@ const Home = () => {
       <div className="container-home">
         <div className="title-home">
           <h1>Despesas</h1>
-          <button className="btn btn-green rounded">Adicionar Despesa</button>
+          <button onClick={() => navigate('/despesa')} className="btn btn-green rounded">Adicionar Despesa</button>
         </div>
 
         <div className="box-despesa">

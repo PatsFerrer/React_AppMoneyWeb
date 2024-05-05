@@ -1,8 +1,13 @@
+import { useNavigate } from 'react-router-dom';
+
 import Sidebar from '../../components/sidebar/Sidebar';
 import Navbar from '../../components/navbar/Navbar';
 import './cad-despesa.css';
 
 const CadDespesa = () => {
+
+  const navigate = useNavigate();
+
   return (
     <>
       <Sidebar />
@@ -35,7 +40,7 @@ const CadDespesa = () => {
           </div>
 
           <div className='btn-group text-right'>
-            <button className='btn btn-blue-outline'>Cancelar</button>
+            <button onClick={() => navigate('/')} className='btn btn-blue-outline'>Cancelar</button>
             <button className='btn btn-blue ml-20'>Salvar</button>
 
           </div>
