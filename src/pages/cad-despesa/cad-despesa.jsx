@@ -1,8 +1,11 @@
+import Sidebar from './../../components/sidebar/Sidebar';
+
 const CadDespesa = () => {
   return (
-    <div>
+    <>
+      <Sidebar />
       <h1>Cadastro de Despesas</h1>
-    </div>
+    </>
   )
 }
 
