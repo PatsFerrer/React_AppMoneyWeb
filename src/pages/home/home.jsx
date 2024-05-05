@@ -38,7 +38,7 @@ const Home = () => {
       <div className="container-home">
         <div className="title-home">
           <h1>Despesas</h1>
-          <button onClick={() => navigate('/despesa')} className="btn btn-green rounded">Adicionar Despesa</button>
+          <button onClick={() => navigate('/despesa/add')} className="btn btn-green rounded">Adicionar Despesa</button>
         </div>
 
         <div className="box-despesa">
