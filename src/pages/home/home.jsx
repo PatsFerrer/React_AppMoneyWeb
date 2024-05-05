@@ -27,6 +27,10 @@ const Home = () => {
     setDespesas(dados);
   }
 
+  const openDespesa = (id) => {
+    navigate('/despesa/' + id)
+  }
+
   useEffect(() => {
     listarDespesas();
   }, []);
@@ -65,7 +69,10 @@ const Home = () => {
                         R$ {desp.valor.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
                       </td>
                       <td className="text-right">
-                        <button className="btn btn-blue rounded">
+                        <button
+                          onClick={() => openDespesa(desp.id)}
+                          className="btn btn-blue rounded"
+                        >
                           <img className="icon-sm" src={icons.edit} alt="" />
                         </button>
                         <button className="btn btn-red ml-10 rounded">
